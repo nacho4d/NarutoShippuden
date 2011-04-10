@@ -18,6 +18,78 @@ var NS_CONTENT = "http://purl.org/rss/1.0/modules/content/";
 
 var showingDetailView = false;
 
+/*
+	Episode Class:
+	==============
+	
+	@public	
+	number: int 
+	titleJa: String
+	titleRomaji: String
+	titleEn: String
+	airedDateJa: Date
+	airedDateEn: Date
+*/
+var Episode = function(number, titleJa, titleRomaji, titleEn, airedDateJa, airedDateEn){
+	this.number = number;
+	this.titleJa = titleJa;
+	this.titleRomaji = titleRomaji;
+	this.titleEn = titleEn;
+	this.airedDateJa = airedDateJa;
+	this.airedDateEn = airedDateEn;
+}
+
+/*
+	EpisodeFeedParser Class:
+	=================
+	
+	@public
+	url : String
+	didStartCallback : function(EpisodeFeedParser) //optional
+	didEndCallback : function(EpisodeFeedParser) //optional
+	didFindEpisode : function(Episode)  //optional
+	didFailParsing : function(Error)
+	parse()
+*/
+var EpisodeFeedParser = function(url){
+	this._url = this.setUrl(url);
+	this.didStartCallback = null;
+	this.didEndCallback = null;
+	this.didFindEpisode = null;
+	this.didFailParsing = null;
+}
+EpisodeFeedParser.prototype.setUrl = function(url){
+	if (url && url.length) {
+        url = url.replace(/^(feed:\/\/)/, "");
+        if (url.substring(0, 7).toLowerCase() != "http://") {
+            url = "http://" + url;
+        }
+		this._url = url;
+    }else{
+		//error: invalid url string
+	}
+}
+EpisodeFeedParser.prototype.parse = function(){
+
+	var xmlRequest = new XMLHttpRequest();
+    xmlRequest.overrideMimeType("text/xml");
+    xmlRequest.open("GET", this._url, true);
+
+    xmlRequest.onreadystatechange = function () {
+        if (xmlRequest.readyState == 4) {
+			
+			//processHTMLWikiNaruto(xmlRequest.responseXML);
+			
+			//process responseXML here
+			//process html document 
+			//get Episodes from wiki html
+        }
+    };
+
+    xmlRequest.send(null);
+}
+
+
 function refreshFeed()
 {
     //var url = attributes.feedURL;
