@@ -7,6 +7,7 @@
 var localizedStrings = {
     "Article content shows here.": "Latest episodes of naruto from Wikipedia",
     "Article title shows here": "Naruto ShippudenEpisodes List",
+    "Button": "Done",
     "Daily Feed": "188: Episode Name",
     "Date": "Date",
     "Done": "Done",
@@ -20,6 +21,8 @@ var localizedStrings = {
     "The feed could not be understood.": "The feed could not be understood.",
     "Untitled": "Untitled"
 };
+
+
 
 
 

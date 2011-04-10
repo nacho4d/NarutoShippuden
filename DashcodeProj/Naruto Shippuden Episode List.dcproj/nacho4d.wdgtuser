@@ -7,13 +7,13 @@
 		<key>ContentSplitViewConfig</key>
 		<integer>8</integer>
 		<key>SplitViewConfig</key>
-		<integer>1</integer>
+		<integer>3</integer>
 		<key>_indexOfCollapsedView</key>
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {872, 494}}</string>
-			<string>{{0, 504}, {872, 284}}</string>
+			<string>{{0, 0}, {838, 379}}</string>
+			<string>{{0, 389}, {838, 443}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -43,24 +43,24 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {244, 809}}</string>
-			<string>{{245, 0}, {873, 809}}</string>
+			<string>{{0, 0}, {244, 853}}</string>
+			<string>{{245, 0}, {839, 853}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>28 198 1117 830 0 0 1680 1028 </string>
+	<string>66 154 1083 874 0 0 1680 1028 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
 		<integer>5</integer>
 		<key>SplitViewConfig</key>
-		<integer>1</integer>
+		<integer>3</integer>
 		<key>_indexOfCollapsedView</key>
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 399}}</string>
-			<string>{{0, 409}, {246, 379}}</string>
+			<string>{{0, 0}, {246, 422}}</string>
+			<string>{{0, 432}, {246, 400}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
@@ -90,9 +90,110 @@
 	</array>
 	<key>Widget</key>
 	<dict>
+		<key>Objects view expanded items</key>
+		<array>
+			<array>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>4</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>2</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>2</integer>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>3</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>3</integer>
+				<integer>0</integer>
+				<integer>2</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>0</integer>
+				<integer>2</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>3</integer>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>0</integer>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
+		</array>
 		<key>Objects view last selections</key>
 		<array>
 			<array>
+				<integer>0</integer>
 				<integer>0</integer>
 			</array>
 		</array>
