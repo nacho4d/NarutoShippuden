@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
+    <script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="attributes.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</head>
+<body onload="load();">
+    <div id="front">
+        <img id="frontImg" src="Parts/Images/front.png" alt="">
+        <div id="imageFront"><img src="Images/Naruto_-_Shippuden.png" id="inner_image"></div>
+        <div id="info"></div>
+        <div id="epDetailBox" onclick="showHideEpisodeDetailBox(event)">
+            <div id="epTitleEn"></div>
+            <div id="epTitleRo"></div>
+            <div id="epTitleJp"></div>
+            <div id="epNumber"></div>
+            <div id="epAiredDateJp"></div>
+            <div id="epAiredDateEn"></div>
+            <div id="epAiredDateJpLabel"></div>
+            <div id="epAiredDateEnLabel"></div>
+        </div>
+        <div id="toolbarFront" onclick="showHideEpisodeDetailBox(event)"></div>
+        <div id="epNumName" onclick="showHideEpisodeDetailBox(event)"></div>
+        <div id="epAiredDate" onclick="showHideEpisodeDetailBox(event)"></div>
+        <img src="Images/backButton.png" id="backButton" onclick="showPrevEntry(event);"><img src="Images/forwardButton.png" id="forwardButton" onclick="showNextEntry(event);">
+    </div>
+    <div id="back">
+        <img id="backImg" src="Parts/Images/back.png" alt="">
+        <div id="imageBackground"><img src="Images/Naruto_-_Shippuden_Silueta.png" id="inner_image1"></div>
+        <div id="text"></div>
+        <div id="text1"></div>
+        <div id="text10"></div>
+        <div id="text3"></div>
+        <div id="text9"></div>
+        <div id="text6"></div>
+        <div id="text7"></div>
+        <div id="text8" onclick="openMailNacho4d(event)"></div>
+        <div id="text5"></div>
+        <div id="toolbarBack"></div>
+        <div id="buttonDoneBackground"></div>
+        <div id="buttonDone"></div>
+        <div id="buttonWikipedia"></div>
+        <div id="buttonNacho4d"></div>
+    </div>
+</body>
+</html>
