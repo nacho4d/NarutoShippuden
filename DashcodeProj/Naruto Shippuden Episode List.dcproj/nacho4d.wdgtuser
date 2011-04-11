@@ -12,8 +12,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {989, 294}}</string>
-			<string>{{0, 304}, {989, 543}}</string>
+			<string>{{0, 0}, {989, 256}}</string>
+			<string>{{0, 266}, {989, 581}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -48,7 +48,7 @@
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>59 139 1234 889 0 0 1680 1028 </string>
+	<string>446 139 1234 889 0 0 1680 1028 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -195,11 +195,7 @@
 			</array>
 		</array>
 		<key>Objects view last selections</key>
-		<array>
-			<array>
-				<integer>0</integer>
-			</array>
-		</array>
+		<array/>
 		<key>Visible StackLayout Views</key>
 		<array>
 			<string>front</string>
