@@ -45,9 +45,9 @@ var EpisodeFeedParser = function(url){
 	this._url = this.setUrl(url);
 	this._lastUpdated = null;
 	this.didStartCallback = null;
+	this.didFindEpisodeCallback = null;
 	this.didEndCallback = null;
-	this.didFindEpisode = null;
-	this.didFailParsing = null;
+	this.didFailCallback = null;
 }
 EpisodeFeedParser.prototype.setUrl = function(url){
 	if (url && url.length) {
@@ -66,22 +66,20 @@ EpisodeFeedParser.prototype.parse = function(){
 
 	var self = this;
     xmlRequest.onreadystatechange = function () {
+    
     	switch(xmlRequest.readyState) {
     		case 0: break;
-    		case 1: console.log("1. loading");
-    		case 2: console.log("2. loaded");
-    		case 3: console.log("3. interactive");
-    		case 4: console.log("4. complete");
+    		case 1: console.log("1. loading"); 
+    			break;
+    		case 2: console.log("2. loaded"); 
+    			self.didStartCallback(self); break;
+    		case 3: console.log("3. interactive"); 
+    			break;
+    		case 4: console.log("4. complete"); 
+    			self._parseDocument(xmlRequest.responseXML); 
+    			self.didEndCallback(self); 
+    			break;
     	}
-        if (xmlRequest.readyState == 4) {
-			
-			self._parseDocument(xmlRequest.responseXML);
-			//processHTMLWikiNaruto(xmlRequest.responseXML);
-			
-			//process responseXML here
-			//process html document 
-			//get Episodes from wiki html
-        }
     };
 
     xmlRequest.send(null);
@@ -93,28 +91,22 @@ EpisodeFeedParser.prototype._parseDocument = function(doc){
 
 	try{
 		if (doc && doc.documentElement) {
-			this._parseHTMLWikiNarutoDocument(doc);
-		}
-		else {
+			this._parseDocumentHTMLWikiNaruto(doc);
+		}else {
             throw new Error(dashcode.getLocalizedString("Failed to load a valid feed."));
         }
 		if (entries && entries.length) {
 			//elements should be shown here
-			
 			//showElement("backButton");
 			//showElement("forwardButton");
 			//showEntry(getNextInmediateEntryIndex());
-            
             this._lastUpdated = (new Date).getTime();
-    
-        }
-        else {
+        }else {
             throw new Error("Feed contains no entries.");
         }
-	
-	
 	}catch (ex) {
-        showError(ex);
+        //showError(ex);
+        console.log("Exception!!");
     }
 
 }
@@ -145,8 +137,7 @@ EpisodeFeedParser.prototype._parseDocumentHTMLWikiNaruto = function(doc){
 			var epAiredDateEn = (tds[3] && tds[3].innerHTML.length > 0)? tds[3].innerHTML : "Not aired yet.";
 			
 			var ep = Episode(epNumber, epTitleJp, epTitleRo, epTitleEn, epAiredDateJp, epAiredDateEn);
-			
-			this.didFindEpisode(ep);
+			this.didFindEpisodeCallback(this, ep);
 			
 			//entries.push(entry);
 			
@@ -160,17 +151,24 @@ EpisodeFeedParser.prototype._parseDocumentHTMLWikiNaruto = function(doc){
 
 function testEpisode(){
 
-	var log = document.getElementById('log');
+	//var log = document.getElementById('log');
 
-	var ep1 = new Episode();
-	log.innerHTML += ep1.description();
-	log.innerHTML += "</br>";
+	//var ep1 = new Episode();
+	//log.innerHTML += ep1.description();
+	//log.innerHTML += "</br>";
 	
-	var ep2 = new Episode(1, 'タイトル', 'Taitoru', 'Title', Date(), Date());
-	log.innerHTML += ep2.description();
+	//var ep2 = new Episode(1, 'タイトル', 'Taitoru', 'Title', Date(), Date());
+	//log.innerHTML += ep2.description();
 	
-	var wikiParser = new EpisodeFeedParser();
-	wikiParser.setUrl("http://en.wikipedia.org/wiki/List_of_Naruto:_Shippuden_episodes");
-	wikiParser.parse();
+	var episodes = new Array();
+	
+	var parser = new EpisodeFeedParser();
+	parser.setUrl("http://en.wikipedia.org/wiki/List_of_Naruto:_Shippuden_episodes");
+	parser.didStartCallback = function(aParser){console.log("did start");};
+	parser.didFindEpisodeCallback = function(aParser, episode){episodes.push(episode); console.log(episode.description());};
+	parser.didEndCallback = function(aParser){console.log("did end");};
+	parser.didFailCallback = function(aParser){console.log("did fail");};
+	
+	parser.parse();
 	
 }
