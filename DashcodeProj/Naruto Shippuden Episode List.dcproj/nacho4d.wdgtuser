@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Breakpoints</key>
+	<dict/>
+	<key>CYLastWindowPosition</key>
+	<string>{1336, 294}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -12,8 +16,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {989, 82}}</string>
-			<string>{{0, 92}, {989, 581}}</string>
+			<string>{{0, 0}, {986, 553}}</string>
+			<string>{{0, 563}, {986, 311}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -43,12 +47,12 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {244, 694}}</string>
-			<string>{{245, 0}, {990, 694}}</string>
+			<string>{{0, 0}, {284, 895}}</string>
+			<string>{{285, 0}, {987, 895}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>16 63 1234 715 0 0 1280 778 </string>
+	<string>87 112 1271 916 0 0 1680 1028 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -59,8 +63,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 341}}</string>
-			<string>{{0, 351}, {246, 322}}</string>
+			<string>{{0, 0}, {286, 599}}</string>
+			<string>{{0, 609}, {286, 265}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
@@ -92,9 +96,6 @@
 	<dict>
 		<key>Objects view expanded items</key>
 		<array>
-			<array>
-				<integer>0</integer>
-			</array>
 			<array>
 				<integer>0</integer>
 				<integer>1</integer>
@@ -187,15 +188,23 @@
 			</array>
 			<array>
 				<integer>0</integer>
-				<integer>1</integer>
-			</array>
-			<array>
-				<integer>0</integer>
-				<integer>0</integer>
 			</array>
 		</array>
 		<key>Objects view last selections</key>
-		<array/>
+		<array>
+			<array>
+				<integer>0</integer>
+			</array>
+		</array>
+		<key>Opened Steps</key>
+		<array>
+			<integer>0</integer>
+			<integer>1</integer>
+			<integer>2</integer>
+			<integer>3</integer>
+			<integer>4</integer>
+			<integer>5</integer>
+		</array>
 		<key>Visible StackLayout Views</key>
 		<array>
 			<string>front</string>

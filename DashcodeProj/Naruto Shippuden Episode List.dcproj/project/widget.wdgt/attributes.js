@@ -5,6 +5,6 @@
  code generator otherwise the changes will be lost.
  */
 var attributes = {
-    feedURL: "",
+    feedURL: "http://en.wikipedia.org/wiki/List_of_Naruto:_Shippuden_episodes",
     feedType: "0"
 };
