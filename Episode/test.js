@@ -32,7 +32,7 @@ EpisodeController.prototype.testEpisode = function(){
 }
 
 
-function testEpisode(){
+function test(){
 
 	// Sample code of the following question: 
 	// http://stackoverflow.com/questions/5639451/why-this-is-not-this/5692094#5692094

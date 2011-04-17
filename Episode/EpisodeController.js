@@ -59,7 +59,7 @@ EpisodeController.prototype.fetchEpisodes = function(urlString){
 };
 
 
-function testEpisode(){
+function test(){
 	//EpisodeController is not implemented in the widget since main.js plays the same role as a Controller would be.
 	var controller = new EpisodeController();
 	controller.fetchEpisodes("http://en.wikipedia.org/wiki/List_of_Naruto:_Shippuden_episodes");

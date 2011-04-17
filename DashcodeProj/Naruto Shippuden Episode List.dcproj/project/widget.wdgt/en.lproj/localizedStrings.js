@@ -15,12 +15,11 @@ var localizedStrings = {
     "Error": "Error",
     "Failed to load a valid feed.": "Failed to load a valid feed.",
     "Loading": "Loading",
-    "No <channel> element in feed.": "No <channel> element in feed.",
-    "No <feed> element in Atom feed.": "No <feed> element in Atom feed.",
     "No feed URL supplied.": "No feed URL supplied.",
     "The feed could not be understood.": "The feed could not be understood.",
     "Untitled": "Untitled"
 };
+
 
 
 

@@ -88,28 +88,20 @@ function fetchEpisodes()
 		
 		parser.didEndCallback = function(parser)
 		{
-			//get next inmediate episode
-			var today = new Date();
-			today.setHours(0);
-			today.setMinutes(0);
-			today.setSeconds(0);
-			today.setMilliseconds(0);
-	
-			var i = episodes.length;
-			do{
-				i--;
-				var airedDate = new Date(episodes[i].airedDateJa);
-			}while (today < airedDate && i > 0); //Regarding dates: the earlier the smaller
-			i++;
+			if (episodes.length > 0){
 			
-			var nextEpisode = episodes[episodes.length-1 <= i ? episodes.length - 1: i];
-
-			//show the calculated episode
-			showElement("backButton");
-			showElement("forwardButton");
-			showEpisode(nextEpisode);
-            
-            lastUpdated = (new Date).getTime();
+				var nextEpisode = episodes[findClosestEpisodeIndex()];
+				
+				//show the calculated episode
+				showElement("backButton");
+				showElement("forwardButton");
+				showEpisode(nextEpisode);
+			
+			}else{
+				showLocalizedMessage("No episodes to show ;(");
+			}
+			
+			lastUpdated = (new Date).getTime();
 		};
 		
 		parser.didFailCallback = function(parser)
@@ -122,40 +114,45 @@ function fetchEpisodes()
 	
 }
 
+function findClosestEpisodeIndex(){
+
+	//var today = new Date("April 15 2013 23:59:00");
+	var today = new Date();
+	today.setHours(0);
+	today.setMinutes(0);
+	today.setSeconds(0);
+	today.setMilliseconds(0);
+	
+	//find the closest next episode
+	var resi = -1;
+	var temp = Number.MAX_VALUE;
+	for(var i = 0; i<episodes.length; i++){
+		var date = new Date(episodes[i].airedDateJa);
+		var diff = date - today; //positive when date is after today
+		if (diff >= 0 && diff < temp){
+			temp = diff;
+			resi = i;
+		}
+	}
+	
+	//if all episodes where in the past get the last one
+	if (resi < 0){
+		resi = episodes.length-1;
+	}
+		
+	return resi;
+}
+
 
 
 function showEpisode(episode)
 {
 
 	if (episode) {
-		
-		var airedDateJa = new Date(episode.airedDateJa);
-		var today = new Date();
-		today.setHours(0);
-		today.setMinutes(0);
-		today.setSeconds(0);
-		today.setMilliseconds(0);
-		
-		var episodeDateMsg;
-		if (airedDateJa == today){
-			episodeDateMsg = "Today!!";
-		}else if (airedDateJa > today && airedDateJa.getTime() - today.getTime < 3600*24*7) {
-			var weekday=new Array(7);
-			weekday[0]="Sunday";
-			weekday[1]="Monday";
-			weekday[2]="Tuesday";
-			weekday[3]="Wednesday";
-			weekday[4]="Thursday";
-			weekday[5]="Friday";
-			weekday[6]="Saturday";
-			episodeDateMsg = "Next " + weekday[episode.airedDateJa.getDay()] + "!";
-		}else{
-			episodeDateMsg = episode.airedDateJa;
-		}
-		
+				
 		//set small box text (bottom)
 		document.getElementById("epNumName").innerText = episode.number + ": " + episode.titleEn;
-		document.getElementById("epAiredDate").innerText = episodeDateMsg;
+		document.getElementById("epAiredDate").innerText = customizedStringFromDate(episode.airedDateJa);
 		
 		//set detailed box text (middle)
 		document.getElementById("epNumber").innerText = episode.number;
@@ -170,6 +167,48 @@ function showEpisode(episode)
 	else{
 		showLocalizedMessage("episode not valid");
 	}
+}
+
+function customizedStringFromDate(dateString){
+	//var today = new Date("April 15 2011 00:00:00"); //set a date for debug
+	var date = new Date(dateString);
+	var today = new Date();
+	today.setHours(0);
+	today.setMinutes(0);
+	today.setSeconds(0);
+	today.setMilliseconds(0);
+	
+	
+	var episodeDateMsg = "";
+	var diff = date - today;
+	var oneDaySecs = 1000*60*60*24;
+	if (0 <= diff && diff < oneDaySecs*7){ 	//if date is within the next 7 days
+		
+		if (diff < oneDaySecs){				//if is today
+			episodeDateMsg = "Today, ";
+		}else if (diff < oneDaySecs *2){	//if is tomorrow
+			episodeDateMsg = "Tomorrow, ";
+		}else{								//otherwise in the week
+			var weekday=new Array(7);
+			weekday[0]="Sunday, ";
+			weekday[1]="Monday, ";
+			weekday[2]="Tuesday, ";
+			weekday[3]="Wednesday, ";
+			weekday[4]="Thursday, ";
+			weekday[5]="Friday, ";
+			weekday[6]="Saturday, ";
+			episodeDateMsg = weekday[date.getDay()];
+		}
+		episodeDateMsg = episodeDateMsg + dateString + "!";
+		
+	}else{
+	
+		//episodeDateMsg = episode.airedDateJa; //in the past or more than 7 days ahead
+		episodeDateMsg = dateString;
+	}
+	
+	return episodeDateMsg;
+	
 }
 
 // ********************************************************************
@@ -352,6 +391,7 @@ function openWikipedia(event)
 function openNacho4d(event)
 {
     openLink("http://web.me.com/nacho4d/");
+	//openLink("https://github.com/nacho4d/NarutoShippuden/");
 }
 function openMailNacho4d(event)
 {
