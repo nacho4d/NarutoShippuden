@@ -3,7 +3,7 @@
 *In some moment of craziness I thought: "Hey, I wish I have a program that tells me what episode should I watch today". So, I came up with this widget that does exactly that!.
 (Incredible useful!! At least once a week. :-p )* 
 
-![Naruto Shippuden Episode List - widget icon ](http://web.me.com/nacho4d/NarutoWidget/About_files/narutoIcon.png)
+![Naruto Shippuden Episode List - widget icon ](http://web.me.com/nacho4d/NarutoWidget/About_files/narutoIcon100.png)
 
 
 
@@ -21,28 +21,36 @@ Its is completely written in javascript (off-course it uses Dashboard framework 
 ##RELEASE  NOTES
 
 ###v1.0 
+
 November 29, 2010
+
  - First version
 
 ###v1.1
+
 To be submitted.
+
  - Fixed some issues with dates.
+
  - Fixed some issues with animations.
+
  - New parser class is implemented: see EpisodeFeedParser.js.
+
  - New buttons for background.
 
-### maybe v1.2
+### v1.2
 Still on progress
- - Aadd a coverflow-like container with a card for each episode
+ - Add a coverflow-like container with a card for each episode
  - Extend this widget for many other animes
  - Localizations(日本語, Español, etc)
  
 
 ## FEEDBACK
 
-Any comment or Idea is welcomed, just tweet or email me.
+Any comment or Idea is welcomed, [tweet me](http://twitter.com/nacho4d) or [email me](nacho4d@mac.com).
 
- [![nacho4d](http://a2.twimg.com/profile_images/1157319667/nacho312.png)](http://twitter.com/nacho4d)
+![@nacho4d]((http://web.me.com/nacho4d/NarutoWidget/About_files/nacho100.png)
+
 
   [1]: http://www.apple.com/downloads/dashboard/movie_tv/narutoshippudenepisodelist.html
   [2]: http://en.wikipedia.org/wiki/List_of_Naruto:_Shippuden_episodes
