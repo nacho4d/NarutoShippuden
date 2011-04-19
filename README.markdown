@@ -49,7 +49,7 @@ Still on progress
 
 Any comment or Idea is welcomed, [tweet me](http://twitter.com/nacho4d) or [email me](nacho4d@mac.com).
 
-![@nacho4d]((http://web.me.com/nacho4d/NarutoWidget/About_files/nacho100.png)
+![@nacho4d](http://web.me.com/nacho4d/NarutoWidget/About_files/nacho100.png)
 
 
   [1]: http://www.apple.com/downloads/dashboard/movie_tv/narutoshippudenepisodelist.html
