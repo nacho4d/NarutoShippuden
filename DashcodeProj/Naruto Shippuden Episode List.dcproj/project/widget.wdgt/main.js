@@ -395,7 +395,7 @@ function openNacho4d(event)
 }
 function openMailNacho4d(event)
 {
-    openLink("mailto:nacho4d@gmail.com?subject=Regarding 'Naruto Shippuden Episode List' Widget");
+    openLink("mailto:nacho4d@mac.com?subject=Regarding 'Naruto Shippuden Episode List' Widget");
 }
 function showBack(event)
 {

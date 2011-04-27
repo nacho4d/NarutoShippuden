@@ -5,7 +5,7 @@
 	<key>Breakpoints</key>
 	<dict/>
 	<key>CYLastWindowPosition</key>
-	<string>{1336, 294}</string>
+	<string>{1334, 305}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -16,8 +16,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {986, 157}}</string>
-			<string>{{0, 167}, {986, 707}}</string>
+			<string>{{0, 0}, {814, 523}}</string>
+			<string>{{0, 533}, {814, 210}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -28,6 +28,10 @@
 		<string>aos.default</string>
 		<key>EmailToNotifyAddress</key>
 		<string>nacho4d@mac.com</string>
+		<key>Save</key>
+		<false/>
+		<key>SavePath</key>
+		<string>/Users/nacho4d/Desktop</string>
 		<key>enableSimulation</key>
 		<true/>
 		<key>simulatedHost</key>
@@ -47,12 +51,12 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {284, 895}}</string>
-			<string>{{285, 0}, {987, 895}}</string>
+			<string>{{0, 0}, {284, 764}}</string>
+			<string>{{285, 0}, {815, 764}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>11 112 1271 916 0 0 1680 1028 </string>
+	<string>181 243 1099 785 0 0 1680 1028 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -63,8 +67,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {286, 599}}</string>
-			<string>{{0, 609}, {286, 265}}</string>
+			<string>{{0, 0}, {286, 228}}</string>
+			<string>{{0, 238}, {286, 505}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
@@ -191,11 +195,27 @@
 			</array>
 			<array>
 				<integer>0</integer>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
 				<integer>1</integer>
 			</array>
 		</array>
 		<key>Objects view last selections</key>
-		<array/>
+		<array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>0</integer>
+			</array>
+		</array>
 		<key>Opened Steps</key>
 		<array>
 			<integer>0</integer>
