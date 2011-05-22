@@ -102,6 +102,6 @@
 	<key>CYProjectFormatVersion</key>
 	<integer>40</integer>
 	<key>IsInCodeGeneratorMode</key>
-	<false/>
+	<true/>
 </dict>
 </plist>
