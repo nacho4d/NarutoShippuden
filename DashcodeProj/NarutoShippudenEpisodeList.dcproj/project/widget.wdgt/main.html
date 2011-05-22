@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
+    <script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="attributes.js" charset="utf-8"></script>
+    <script type="text/javascript" src="EpisodeFeedParser.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</head>
+<body onload="load();" apple-part="com.apple.Dashcode.part.StackLayout">
+    <div id="front">
+        <img id="frontImg" src="Parts/Images/front.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.frontimage" apple-style="image-theme: 1; image-shape: 3; image-opacity: 1.00; image-top-color: 1.0000,1.0000,1.0000; image-bottom-color: 0.6154,0.6154,0.6154; image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.5294,0.5294,0.5294; image-border-width: 1; shine-strength: 0.9; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
+        <div id="imageFront" onclick="showHideEpisodeDetailBox(event)">
+            <div apple-part="com.apple.Dashcode.part.imageLayout" id="image" apple-group="image"><img class="apple-hidden" src="Images/frontBackground.png" id="inner_image5" apple-group="image"></div>
+        </div>
+        <div class="apple-no-children" id="info" apple-part="com.apple.Dashcode.part.infobutton" apple-default-image-visibility="hidden"></div>
+        <div id="epDetailBox" onclick="showHideEpisodeDetailBox(event)" apple-default-image-visibility="hidden">
+            <div id="epTitleEn" class="shadowedText"></div>
+            <div id="epTitleRo" class="shadowedText"></div>
+            <div id="epTitleJp" class="shadowedText"></div>
+            <div id="epNumber" class="shadowedText">123</div>
+            <div id="epAiredDateJp" class="shadowedText"></div>
+            <div id="epAiredDateEn" class="shadowedText"></div>
+            <div id="epAiredDateJpLabel" class="shadowedText">Japanese Aired Date:</div>
+            <div id="epAiredDateEnLabel" class="shadowedText">English Aired Date:</div>
+        </div>
+        <div id="epNumName" onclick="showHideEpisodeDetailBox(event)">188: Episode Name</div>
+        <div id="epAiredDate" onclick="showHideEpisodeDetailBox(event)">aired date</div>
+        <img src="Images/backButton.png" id="backButton" onclick="showPrevEpisode(event)"><img src="Images/forwardButton.png" id="forwardButton" onclick="showNextEpisode(event)">
+    </div>
+    <div id="back">
+        <img id="backImg" src="Parts/Images/back.png" alt="">
+        <div id="imageBackground"><img src="Images/Naruto_-_Shippuden_Silueta.png" id="inner_image1">
+            <div id="textBackContainer" apple-part="com.apple.Dashcode.part.box"><div id="textBack1" class="textBack">Naruto Shippuden Episode List</div><div id="textBack2" class="textBack">Version 1.1.0</div><div id="textBack3" class="textBack">© nacho4d</div><div id="textBack4" onclick="openMailNacho4d(event)" class="textBack">nacho4d@mac.com</div><div id="textBack5" class="textBack">　　　　　　 　　　　　 　　　　"Naruto Shippuden Episode List" parses Wikipedia HTML and shows some Japanese and English relevant information of the episodes. Assuring you always the latest info.</div><div id="textBack6" class="textBack">Naruto Shippuden is produced by Studio Pierrot and TV Tokyo based on the series by Masashi Kishimoto.</div><div id="textBack7" class="textBack">Image taken from Wikipedia, Copyrights from Studio Pierrot and Masashi Kishimoto.</div><div id="textBack8" class="textBack">Infomation may vary while source site is being edited ;-)</div><div id="textBack9" class="textBack">enjoy!</div></div>
+        </div>
+        <div apple-part="com.apple.Dashcode.part.imageLayout" id="backImage1" apple-group="image2" onclick="showFront(event)"><img class="apple-hidden" src="Images/back.png" id="inner_image4" apple-group="image2"></div>
+        <div apple-part="com.apple.Dashcode.part.imageLayout" id="backImage2" apple-group="image" onclick="openWikipedia(event)"><img class="apple-hidden" src="Images/wiki.png" id="inner_image2" apple-group="image"></div>
+        <div apple-part="com.apple.Dashcode.part.imageLayout" id="backImage3" apple-group="image1" onclick="openNacho4d(event)"><img class="apple-hidden" src="Images/nacho4d.png" id="inner_image3" apple-group="image1"></div>
+    </div>
+</body>
+</html>
