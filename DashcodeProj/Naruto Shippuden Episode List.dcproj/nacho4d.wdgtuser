@@ -9,15 +9,15 @@
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
-		<integer>24</integer>
+		<integer>8</integer>
 		<key>SplitViewConfig</key>
 		<integer>3</integer>
 		<key>_indexOfCollapsedView</key>
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1507, 571}}</string>
-			<string>{{0, 581}, {1507, 373}}</string>
+			<string>{{0, 0}, {1694, 571}}</string>
+			<string>{{0, 581}, {1694, 373}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -51,8 +51,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {389, 975}}</string>
-			<string>{{390, 0}, {1508, 975}}</string>
+			<string>{{0, 0}, {202, 975}}</string>
+			<string>{{203, 0}, {1695, 975}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
@@ -67,8 +67,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {391, 562}}</string>
-			<string>{{0, 572}, {391, 382}}</string>
+			<string>{{0, 0}, {204, 562}}</string>
+			<string>{{0, 572}, {204, 382}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
