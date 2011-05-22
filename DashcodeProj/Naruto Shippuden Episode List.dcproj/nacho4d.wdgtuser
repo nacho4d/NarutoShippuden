@@ -9,15 +9,15 @@
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
-		<integer>8</integer>
+		<integer>24</integer>
 		<key>SplitViewConfig</key>
 		<integer>3</integer>
 		<key>_indexOfCollapsedView</key>
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {814, 523}}</string>
-			<string>{{0, 533}, {814, 210}}</string>
+			<string>{{0, 0}, {1507, 571}}</string>
+			<string>{{0, 581}, {1507, 373}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -51,12 +51,12 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {284, 764}}</string>
-			<string>{{285, 0}, {815, 764}}</string>
+			<string>{{0, 0}, {389, 975}}</string>
+			<string>{{390, 0}, {1508, 975}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>181 243 1099 785 0 0 1680 1028 </string>
+	<string>2 62 1897 996 0 0 1920 1058 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -67,8 +67,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {286, 228}}</string>
-			<string>{{0, 238}, {286, 505}}</string>
+			<string>{{0, 0}, {391, 562}}</string>
+			<string>{{0, 572}, {391, 382}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
@@ -203,19 +203,46 @@
 			</array>
 			<array>
 				<integer>0</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>4</integer>
 				<integer>0</integer>
 				<integer>1</integer>
 			</array>
-		</array>
-		<key>Objects view last selections</key>
-		<array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>2</integer>
+			</array>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
 				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>5</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>5</integer>
 				<integer>0</integer>
 			</array>
 		</array>
+		<key>Objects view last selections</key>
+		<array/>
 		<key>Opened Steps</key>
 		<array>
 			<integer>0</integer>

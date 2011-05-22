@@ -1,12 +1,12 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-    <script type="text/javascript" src="EpisodeFeedParser.js" charset="utf-8"></script>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
     <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
     <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="EpisodeFeedParser.js" charset="utf-8"></script>
     <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
     <script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
     <script type="text/javascript" src="attributes.js" charset="utf-8"></script>
@@ -15,7 +15,9 @@
 <body onload="load();">
     <div id="front">
         <img id="frontImg" src="Parts/Images/front.png" alt="">
-        <div id="imageFront"><img src="Images/Naruto_-_Shippuden.png" id="inner_image"></div>
+        <div id="imageFront" onclick="showHideEpisodeDetailBox(event)">
+            <div apple-part="com.apple.Dashcode.part.imageLayout" id="image" apple-group="image"><img class="apple-hidden" src="Images/frontBackground.png" id="inner_image5" apple-group="image"></div>
+        </div>
         <div id="info"><div style="position: absolute; top: 0px; left: 0px; width: 13px; height: 13px; opacity: 0.25; visibility: hidden; background-image: url(file:///System/Library/WidgetResources/ibutton/black_rollie.png); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-position: 0% 0%; background-repeat: no-repeat no-repeat; "></div><img width="13" height="13" alt="Info" style="position: absolute; top: 0px; left: 0px; opacity: 0; " src="file:///System/Library/WidgetResources/ibutton/black_i.png"></div>
         <div id="epDetailBox" onclick="showHideEpisodeDetailBox(event)" apple-default-image-visibility="hidden">
             <div id="epTitleEn"></div>
@@ -27,7 +29,6 @@
             <div id="epAiredDateJpLabel">Japanese Aired Date:</div>
             <div id="epAiredDateEnLabel">English Aired Date:</div>
         </div>
-        <div id="toolbarFront" onclick="showHideEpisodeDetailBox(event)"><div style="left: 0px; right: 0px; width: auto; height: 39px; "><div style="position: absolute; display: inline-block; height: 39px; width: 10px; background-image: url(file:///var/folders/v3/v3KeurcmGRS-kd8ds28E3E+++TI/-Tmp-/Dashcode/.Naruto%20Shippuden%20Episode%20List.dcprojIOR9E3/Naruto%20Shippuden%20Episode%20List.dcproj/project/widget.wdgt/Parts/Images/toolbarFront_left.png); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-position: 0% 0%; background-repeat: no-repeat no-repeat; "></div><div style="position: absolute; display: inline-block; line-height: 39px; height: 39px; left: 10px; right: 10px; overflow-x: hidden; overflow-y: hidden; width: auto; white-space: nowrap; background-image: url(file:///var/folders/v3/v3KeurcmGRS-kd8ds28E3E+++TI/-Tmp-/Dashcode/.Naruto%20Shippuden%20Episode%20List.dcprojIOR9E3/Naruto%20Shippuden%20Episode%20List.dcproj/project/widget.wdgt/Parts/Images/toolbarFront_middle.png); background-repeat: repeat no-repeat; "></div><div style="position: absolute; display: inline-block; height: 39px; width: 10px; right: 0px; background-image: url(file:///var/folders/v3/v3KeurcmGRS-kd8ds28E3E+++TI/-Tmp-/Dashcode/.Naruto%20Shippuden%20Episode%20List.dcprojIOR9E3/Naruto%20Shippuden%20Episode%20List.dcproj/project/widget.wdgt/Parts/Images/toolbarFront_right.png); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-position: 0% 0%; background-repeat: no-repeat no-repeat; "></div></div></div>
         <div id="epNumName" onclick="showHideEpisodeDetailBox(event)">188: Episode Name</div>
         <div id="epAiredDate" onclick="showHideEpisodeDetailBox(event)">aired date</div>
         <img src="Images/backButton.png" id="backButton" onclick="showPrevEpisode(event)"><img src="Images/forwardButton.png" id="forwardButton" onclick="showNextEpisode(event)">

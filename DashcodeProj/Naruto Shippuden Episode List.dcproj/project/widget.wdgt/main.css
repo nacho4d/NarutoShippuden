@@ -11,12 +11,12 @@ body {
 #frontImg {
     position: absolute;
     display: block;
+    top: 0px;
+    left: 0px;
     width: auto;
     right: 0px;
     height: auto;
     bottom: 0px;
-    top: 0px;
-    left: 0px;
 }
 
 #info {
@@ -86,14 +86,6 @@ body {
     -apple-dashboard-region: dashboard-region(control rectangle);
     top: 423px;
     left: 267px;
-}
-
-#toolbarFront {
-    position: absolute;
-    height: 39px;
-    left: 12px;
-    width: 270px;
-    top: 408px;
 }
 
 #epDetailBox {
@@ -352,19 +344,6 @@ body {
     left: 12px;
     top: 8px;
     width: 270px;
-}
-
-#inner_image {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
-    top: 0px;
-    margin: auto;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
 }
 
 #imageBackground {
@@ -678,6 +657,33 @@ body {
 }
 
 #inner_image4 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#img {
+}
+
+#image {
+    width: 294px;
+    height: 460px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: -12px;
+    top: -8px;
+}
+
+#inner_image5 {
     position: absolute;
     bottom: 0px;
     right: 0px;

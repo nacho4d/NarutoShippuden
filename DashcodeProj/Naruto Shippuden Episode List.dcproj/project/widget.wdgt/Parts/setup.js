@@ -10,8 +10,10 @@ var dashcodePartSpecs = {
     "backImage3": { "view": "DC.ImageLayout" },
     "button": { "creationFunction": "CreateButton", "leftImageWidth": 10, "rightImageWidth": 10, "text": "Button" },
     "glassButton1": { "creationFunction": "CreateGlassButton", "text": "Button" },
-    "glassButton2": { "creationFunction": "CreateGlassButton", "text": "Button" }
+    "glassButton2": { "creationFunction": "CreateGlassButton", "text": "Button" },
+    "image": { "view": "DC.ImageLayout" }
 };
+
 
 
 
